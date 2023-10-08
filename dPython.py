@@ -1,3 +1,5 @@
+import sys
+
 # Função para equilibrar o saldo bancário
 def equilibrar_saldo(saldo_atual, valor_deposito, valor_retirada):
     # Atualiza o saldo com base nas transações
@@ -7,10 +9,14 @@ def equilibrar_saldo(saldo_atual, valor_deposito, valor_retirada):
     saldo_atual = round(saldo_atual, 1)
     return saldo_atual
 
-# Solicita as entradas ao usuário
-saldo_atual = float(input("Digite o saldo atual da conta bancária: "))
-valor_deposito = float(input("Digite o valor do depósito: "))
-valor_retirada = float(input("Digite o valor da retirada: "))
+# Lê o saldo atual da conta bancária
+saldo_atual = float(sys.stdin.readline())
+
+# Lê o valor do depósito
+valor_deposito = float(sys.stdin.readline())
+
+# Lê o valor da retirada
+valor_retirada = float(sys.stdin.readline())
 
 # Chama a função para equilibrar o saldo
 novo_saldo = equilibrar_saldo(saldo_atual, valor_deposito, valor_retirada)
